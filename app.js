@@ -8,12 +8,18 @@ const http = require('http');
 // New line
 const expressConfig = require('./config/express');
 
+// Add this line
+const routeConfig = require('./routes');
+
 // Setup server
 const app = express();
 const server = http.createServer(app);
 
 // New line
 expressConfig(app);
+
+// Add this line
+routeConfig(app);
 
 const config = {
   port: 8080,
