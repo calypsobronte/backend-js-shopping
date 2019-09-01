@@ -1,0 +1,27 @@
+{
+  "name": "backend-js-shopping",
+  "version": "1.0.0",
+  "description": "Workshop Fullstack JS Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calypsobronte/backend-js-shopping.git"
+  },
+  "keywords": [
+    "workshop",
+    "javascript",
+    "developer",
+    "fullstack",
+    "frontend",
+    "backend"
+  ],
+  "author": "Lina María Montaño Ramírez - Calypso Brontë",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calypsobronte/backend-js-shopping/issues"
+  },
+  "homepage": "https://github.com/calypsobronte/backend-js-shopping#readme"
+}
