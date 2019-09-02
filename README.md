@@ -48,3 +48,6 @@ backend-js-shopping
 ├── routes.js
 └── index.js
 ```
+# License
+
+**MIT**
