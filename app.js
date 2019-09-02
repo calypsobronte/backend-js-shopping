@@ -6,13 +6,13 @@ const express = require('express');
 const http = require('http');
 
 // New line
+const mongoose = require('mongoose');
 const expressConfig = require('./config/express');
 
 // Add this line
 const routeConfig = require('./routes');
 
 // Add this line mongooes
-const mongoose = require('mongoose');
 
 const config = require('./config/environment');
 
