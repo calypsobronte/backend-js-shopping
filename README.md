@@ -50,4 +50,6 @@ backend-js-shopping
 ```
 # License
 
-**MIT**
+[**MIT**]
+
+[**MIT**]: https://github.com/calypsobronte/backend-js-shopping/blob/master/LICENSE
