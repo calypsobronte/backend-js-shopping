@@ -21,7 +21,7 @@ const all = {
 
   // MongoDB connection options
   mongo: {
-    uri: process.env.MONGODB_URI || 'mongodb+srv://admin:<password>@cluster0-ikmra.mongodb.net/test?retryWrites=true&w=majority',
+    uri: process.env.MONGODB_URI || 'mongodb+srv://admin:god123@cluster0-xyfcm.mongodb.net/test?retryWrites=true&w=majority',
     db: 'workshop-fullstack-js',
   },
 };

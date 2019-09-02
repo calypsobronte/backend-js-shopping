@@ -4,16 +4,12 @@
 
 const express = require('express');
 const http = require('http');
-
 // New line
 const mongoose = require('mongoose');
+
 const expressConfig = require('./config/express');
-
-// Add this line
 const routeConfig = require('./routes');
-
-// Add this line mongooes
-
+// New Line
 const config = require('./config/environment');
 
 // Connect to MongoDB
@@ -30,17 +26,8 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 const server = http.createServer(app);
 
-// New line
 expressConfig(app);
-
-// Add this line
 routeConfig(app);
-
-// const config = {
-//   port: 8080,
-//   ip: '127.0.0.1',
-// };
-
 
 // Start server
 function startServer() {
