@@ -3,6 +3,8 @@
  * GET     /api/products           ->  index
  * GET     /api/products/:id       ->  show
  * POSG    /api/products           ->  create
+ * PATCH   /api/products/:id       ->  update
+ * DELETE  /api/products/:id       ->  delete
  */
 
 const Product = require('./product.model');
@@ -47,6 +49,20 @@ function create(req, res) {
     .catch(handleError(res));
 }
 
+// Update product
+function update(req, res) {
+  return Product.findByIdAndUpdate(req.params.id, req.body).exec()
+    .then(respondWithResult(res, 200))
+    .catch(handleError(res));
+}
+
+function remove(req, res) {
+  return Product.findByIdAndDelete(req.params.id).exec()
+    .then(handleEntityNotFound(res))
+    .then(respondWithResult(res))
+    .catch(handleError(res));
+}
+
 // Gets a single product from the DB
 function show(req, res) {
   return Product.findById(req.params.id).exec()
@@ -59,4 +75,6 @@ module.exports = {
   create,
   show,
   index,
+  update,
+  remove,
 };
