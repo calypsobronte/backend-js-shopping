@@ -16,6 +16,6 @@ const router = new Router();
 router.get('/', auth.isAuthenticated(), controller.index);
 router.post('/', controller.create);
 router.get('/:id', auth.isAuthenticated(), controller.show);
-router.delete('/:id', auth.hasRole('admin'), controller.delete);
+router.delete('/:id', auth.hasRole('admin'), controller.remove);
 
 module.exports = router;
