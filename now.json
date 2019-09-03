@@ -20,6 +20,6 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "PORT": 80
+    "PORT": "80"
   }
 }
