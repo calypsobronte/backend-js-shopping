@@ -1,3 +1,8 @@
+/**
+ * Main application routes
+ * @author: Lina Maria Montaño Ramirez <calypsobronte@calypsobronte.me>
+ */
+
 const { Router } = require('express');
 const controller = require('./user.controller');
 
@@ -10,5 +15,7 @@ const router = new Router();
 // New Line
 router.get('/', auth.isAuthenticated(), controller.index);
 router.post('/', controller.create);
+router.get('/:id', auth.isAuthenticated(), controller.show);
+router.delete('/:id', auth.hasRole('admin'), controller.delete);
 
 module.exports = router;

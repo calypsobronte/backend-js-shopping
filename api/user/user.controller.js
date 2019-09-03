@@ -1,3 +1,8 @@
+/**
+ * Main application routes
+ * @author: Lina Maria Montaño Ramirez <calypsobronte@calypsobronte.me>
+ */
+
 const jwt = require('jsonwebtoken');
 
 const User = require('./user.model');
@@ -23,6 +28,12 @@ function index(req, res) {
     .catch(handleError(res));
 }
 
+function show(req, res) {
+  return User.findById(req.params.id).exec()
+    .then(users => res.status(200).json(users))
+    .catch(handleError(res));
+}
+
 /**
  * Creates a new user
  */
@@ -43,7 +54,18 @@ function create(req, res) {
     .catch(validationError(res));
 }
 
+/**
+ * Delete user
+ */
+function remove(req, res) {
+  return User.findByIdAndRemove(req.params.id).exec()
+    .then(res => res.status(200).json())
+    .catch(err => res.status(500).send(err));
+}
+
 module.exports = {
   index,
   create,
+  remove,
+  show,
 };
